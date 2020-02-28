@@ -1,0 +1,63 @@
+---
+title: "Rapport Scientifique"
+author: "Nom des auteurs"
+date: "...."
+bibliography: references.bib
+lang: "fr"
+output: 
+  bookdown::html_document2: default 
+  bookdown::word_document2: default
+  bookdown::pdf_document2: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+# List of packages
+SciViews::R
+```
+
+# Résumé {-}
+
+blabla
+
+# Introduction
+
+blablabla [@Anderson1935]
+
+# Matériels et méthodes
+
+blabla
+
+# Résultats
+
+```{r import_data}
+iris <- read("iris", package = "datasets", lang = "fr")
+```
+
+On observe sur la figure \@ref(fig:is)
+
+```{r is, fig.cap= "Variation de la longueur des pétales [cm] en fonction de la longueur des sépales [cm] en fonction de trois espèces d'Iris"}
+chart(iris, petal_length ~ sepal_length %col=% species) +
+  geom_point()
+```
+
+Le tableau \@ref(tab:kable) met en évidence ...
+
+```{r kable}
+iris %>.%
+  group_by(., species) %>.%
+  summarise(., pl_mean = round(mean(petal_length), 3), pl_sd = round(sd(petal_length), 3)) %>.%
+  knitr::kable(., 
+    caption = "Moyennes et écart-types [cm] de trois espèces d' Iris",
+    col.names = c("Espèces", "Moyenne [cm]", "Ecart-type [cm]"), align = "c")
+```
+
+# Discussion
+
+blabla
+
+# Conclusions
+
+blabla
+
+# Références

@@ -1,0 +1,22 @@
+---
+title: "Cahier de laboratoire"
+author: '...'
+date: "11/18/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Objectif
+
+Le notebook doit répondre à une question et contenir toute la progression afin de répondre à cette question. Vous pouvez tout y consigner sur la question d'intérêt comme vous le faite dans votre carnet de laboratoire lors d'expérience.
+
+Gardez cette progression dans un document structuré est très intéressant et à ne pas négliger. 
+
+Assurez vous néanmoins que ce document est toujours exécutable. Il est possibel d'ajouter l'argument eval = FALSE dans un chunk que vous ne souhaitez pas éxécuter. 
+
+Lorsque vous avez répondu à la question sur laquelle porte ce notebook. Transférez les éléments les plus pertienents dans la section résultats de votre rapport du dossier report.
