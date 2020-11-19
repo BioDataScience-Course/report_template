@@ -42,6 +42,16 @@ vignettes/*.pdf
 
 README.html
 
+# pdf and html files
+
+docs/notebook/**.html
+docs/notebook/**.pdf
+docs/notebook/**.docx
+
+docs/report/**.html
+docs/report/**.pdf
+docs/report/**.docx
+
 # Mac
 
 .DS_STORE
